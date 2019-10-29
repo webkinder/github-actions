@@ -12,9 +12,29 @@
 
 ## Archive Action
 Use this action to create a output zip of your plugin or theme.
-You can add a .build_exclude file to your plugin or theme
+You can add a `.build_exclude` file to your plugin or theme to exclude files or folders from being included in your release zip.
 
 ## Example Usage
+
+### build_exclude
+Add a file named `.build_exclude` to your project to define which files or folders should be excluded.
+```
+.gitignore
+.gitattributes
+.build_exclude
+.DS_Store
+.git/*
+.github/*
+
+composer.json
+composer.lock
+README.md
+./node_modules/*
+./tests/*
+./bin/*
+yarn.lock
+package.json
+```
 
 ### Workflow
 ``` yml
@@ -45,13 +65,13 @@ jobs:
       uses: webkinder/github-actions/archive@v1.0.0
     
     - name: copy file via ssh password
-      uses: appleboy/scp-action@master
+      uses: appleboy/scp-action@0.0.4
       with:
          host: ${{ secrets.HOST }}
          username: ${{ secrets.USERNAME }}
          password: ${{ secrets.PASSWORD }}
          port: ${{ secrets.PORT }}
          source: ${{ steps.archive.outputs.upload_url }}
-         target: "test"
+         target: "/var/www/"
        
 ```

@@ -6,9 +6,9 @@ set -eu
 # Create zip archive
 echo "📦 Creating zip archive"
 
-filename=${PWD##*/}.zip
+echo $1
 
-zip -r $filename . -x@.build_exclude || { echo "⛔️ Unable to create zip archive."; exit 1;  }
+zip -r $1 . -x@.build_exclude || { echo "⛔️ Unable to create zip archive."; exit 1;  }
 
 echo "✔️ Successfully created release"
 

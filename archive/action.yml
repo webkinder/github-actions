@@ -4,6 +4,13 @@ description: 'Create a release zip for WordPress Plugins or Themes'
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - ${{ inputs.filename }}
+inputs:
+  filename:
+    description: 'File name of the output zip file'
+    required: true
+    default: 'plugin.zip'
 outputs:
   file:
     description: 'Output zip file of the plugin or theme'
