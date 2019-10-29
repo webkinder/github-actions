@@ -12,5 +12,5 @@ inputs:
     required: true
     default: 'plugin.zip'
 outputs:
-  file:
+  filename:
     description: 'Output zip file of the plugin or theme'
