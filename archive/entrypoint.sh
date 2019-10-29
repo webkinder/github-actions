@@ -1,5 +1,7 @@
 #!/bin/sh
 
+sudo apt-get install zip
+
 # Exit if any command fails
 set -eu
 
