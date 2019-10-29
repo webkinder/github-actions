@@ -1,0 +1,6 @@
+# action.yml
+name: 'Archive'
+description: 'Create a release zip for WordPress Plugins or Themes'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
