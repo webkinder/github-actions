@@ -63,6 +63,8 @@ jobs:
     - name: Archive
       id: archive
       uses: webkinder/github-actions/archive@v1.0.0
+      with:
+         filename: "example-plugin.zip"
     
     - name: copy file via ssh password
       uses: appleboy/scp-action@0.0.4
@@ -71,7 +73,7 @@ jobs:
          username: ${{ secrets.USERNAME }}
          password: ${{ secrets.PASSWORD }}
          port: ${{ secrets.PORT }}
-         source: ${{ steps.archive.outputs.upload_url }}
+         source: ${{ steps.archive.outputs.filename }}
          target: "/var/www/"
        
 ```
