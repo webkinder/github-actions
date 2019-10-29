@@ -11,3 +11,10 @@
 </center>
 
 # WordPress GitHub Actions
+
+To create a distribution ready WordPress Plugin from source files there are mostly several steps needed:
+- Install Composer dependencies
+- Install npm dependencies
+- ... several other steps
+
+This can be done with the help of Github Actions.
