@@ -12,4 +12,4 @@ zip -r $1 . -x@.build_exclude || { echo "⛔️ Unable to create zip archive."; 
 
 echo "✔️ Successfully created release"
 
-echo ::set-output name=file::$filename
+echo ::set-output name=file::$1
