@@ -10,6 +10,6 @@ echo ${PWD##*/}
 
 ls
 
-zip -r "${PWD##*/}.zip" . -x@build_exclude || { echo "\⛔️ Unable to create zip archive.\n"; exit 1;  }
+zip -r "${PWD##*/}.zip" . -x@.build_exclude || { echo "\⛔️ Unable to create zip archive.\n"; exit 1;  }
 
 echo "\n✔️ Successfully created release \n"
