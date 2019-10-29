@@ -4,12 +4,12 @@
 set -eu
 
 # Create zip archive
-echo "\n📦 Creating zip archive\n"
+echo "📦 Creating zip archive"
 
-echo ${PWD##*/}
+filename=${PWD##*/}.zip
 
-ls
+zip -r $filename . -x@.build_exclude || { echo "⛔️ Unable to create zip archive."; exit 1;  }
 
-zip -r "${PWD##*/}.zip" . -x@.build_exclude || { echo "\⛔️ Unable to create zip archive.\n"; exit 1;  }
+echo "✔️ Successfully created release"
 
-echo "\n✔️ Successfully created release \n"
+echo ::set-output name=file::$filename
