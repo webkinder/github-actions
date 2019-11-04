@@ -6,7 +6,7 @@
 
 <center>
 <a href="https://webkinder.ch">
-<img src="https://raw.githubusercontent.com/webkinder/github-actions/master/webkinder-banner.png" alt="WebKinder" />
+<img src="https://www.webkinder.ch/static/webkinder-banner.png" alt="WebKinder" />
 </a>
 </center>
 
