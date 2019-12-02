@@ -17,11 +17,11 @@ You can add a `.build_exclude` file to your plugin or theme to exclude files or 
 ## Example Usage
 
 ### build_exclude
-Add a file named `.build_exclude` to your project to define which files or folders should be excluded.
+Add a file named `.distignore` to your project to define which files or folders should be excluded.
 ```
 .gitignore
 .gitattributes
-.build_exclude
+.distignore
 .DS_Store
 .git/*
 .github/*

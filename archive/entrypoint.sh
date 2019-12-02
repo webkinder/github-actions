@@ -8,7 +8,7 @@ echo "📦 Creating zip archive"
 
 echo $1
 
-zip -r $1 . -x@.build_exclude || { echo "⛔️ Unable to create zip archive."; exit 1;  }
+zip -r $1 . -x@.distignore || { echo "⛔️ Unable to create zip archive."; exit 1;  }
 
 echo "✔️ Successfully created release"
 
