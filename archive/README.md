@@ -62,7 +62,7 @@ jobs:
     # Create release archive from the source files
     - name: Archive
       id: archive
-      uses: webkinder/github-actions/archive@v1.0.0
+      uses: webkinder/github-actions/archive@1.0.0
       with:
          filename: "example-plugin.zip"
     
